@@ -1,0 +1,108 @@
+:root {
+  --bg-body: #0a0c1b;
+  --bg-container: #1c1937;
+  --primary: #543876;
+  --white: #fff;
+  --silver: silver;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+  background-color: var(--bg-body);
+}
+.container {
+  background-color: var(--bg-container);
+  border-radius: 8px;
+  width: 90%;
+  height: 500px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column-reverse;
+    height: 90vh;
+    margin: 30px auto;
+  }
+}
+.container .info {
+  width: 48%;
+  padding-left: 50px;
+}
+@media (max-width: 767px) {
+  .container .info {
+    width: 90%;
+    height: 60%;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+.container .info h1 {
+  color: var(--white);
+  margin-bottom: 15px;
+}
+.container .info h1 span {
+  color: var(--primary);
+}
+.container .info > p {
+  color: var(--silver);
+  line-height: 1.4;
+}
+.container .info .boxs {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .container .info .boxs {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+}
+.container .info .boxs .box {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.container .info .boxs .box p:first-child {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.container .info .boxs .box p:last-child {
+  color: var(--silver);
+}
+.container .image {
+  width: 48%;
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .container .image {
+    width: 100%;
+    height: 35%;
+  }
+}
+.container .image .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #5438767d;
+}
+.container .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
